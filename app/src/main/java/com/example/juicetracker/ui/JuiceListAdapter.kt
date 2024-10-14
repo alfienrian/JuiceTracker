@@ -62,6 +62,15 @@ class JuiceListAdapter(
     ) : RecyclerView.ViewHolder(composeView) {
         fun bind(input: Juice) {
             composeView.setContent {
+                AdBanner(
+                    Modifier
+                        .fillMaxWidth()
+                        .padding(
+                            top = dimensionResource(R.dimen.padding_medium),
+                            bottom = dimensionResource(R.dimen.padding_small)
+                        )
+                )
+
                 ListItem(
                     input,
                     onDelete,
